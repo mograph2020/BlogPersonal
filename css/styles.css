@@ -901,4 +901,11 @@ span.global {
     .social-links {
         justify-content: center;
     }
+
+    .weather-card {
+            
+            max-height: 700px;
+            
+        }
+
 }
