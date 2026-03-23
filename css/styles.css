@@ -254,7 +254,7 @@ span.global {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
-    max-height: fit-content;
+    max-height: 700px;
 }
 
 .section-title {
