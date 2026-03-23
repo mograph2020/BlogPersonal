@@ -22,38 +22,7 @@
             position: relative;
         }
 
-        /* Parallax Background */
-        .parallax-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            z-index: -1;
-        }
-
-        .parallax-layer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .cloud-1 {
-            top: 20%;
-            left: 10%;
-            opacity: 0.3;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .cloud-2 {
-            top: 70%;
-            right: 5%;
-            opacity: 0.2;
-            animation: float 8s ease-in-out infinite;
-        }
+       
 
         @keyframes float {
             0%, 100% {
@@ -350,9 +319,7 @@
 
         /* Responsive */
         @media (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
+           
 
             .weather-card {
                 padding: 25px;
@@ -396,9 +363,7 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="logo">
-                <h1>Clima <span class="viajes"> global </span></h1>
-            </div>
+            <div class="logo"><h1>Clima <span class="viajes"> global </span></h1></div>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link active">Inicio</a>
                 <a href="argentina.html" class="nav-link">Argentina</a>
@@ -407,19 +372,21 @@
                 <a href="uruguay.html" class="nav-link">Uruguay</a>
                 <a href="weather.html" class="nav-link">Clima</a>
             </nav>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <!-- Parallax Background -->
-    <div class="parallax-bg">
-        <div class="parallax-layer cloud-1"></div>
-        <div class="parallax-layer cloud-2"></div>
-    </div>
+     <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Inicio</a>
+        <a href="argentina.html" class="mobile-nav-link">Argentina</a>
+        <a href="chile.html" class="mobile-nav-link">Chile</a>
+        <a href="peru.html" class="mobile-nav-link">Perú</a>
+        <a href="uruguay.html" class="mobile-nav-link">Uruguay</a>
+        <a href="weather.html" class="mobile-nav-link">Clima</a>
+    </nav>
+
+   
 
     <!-- Main Container -->
     <div class="container">
@@ -672,7 +639,38 @@
 
         // Example: Load weather for a default city
         fetchWeather('Buenos Aires');
+
+    function initHamburger() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Cerrar menú al cambiar de página
+        const mobileLinks = mobileNav.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer click fuera
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileNav.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });}
+
+    }
     </script> 
+    <script src="js/script.js"></script>
+    
     
     <footer class="footer">
         <div class="footer-container">
@@ -710,7 +708,6 @@
         
     </footer> 
 
-    
-   
+       
 </body>
 </html>
