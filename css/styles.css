@@ -146,7 +146,7 @@ span.global {
     gap: 1rem;
     padding: 1rem;
     position: fixed;
-    top: 60px;
+    top: auto;
     right: 0;
     width: 100%;
     z-index: 999;
