@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenos Aires - Argentina | Mi Blog de Viajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Fotos  <span class="viajes">Buenos Aires</span></h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="argentina.html" class="nav-link active">Argentina</a>
+                <a href="chile.html" class="nav-link">Chile</a>
+                <a href="peru.html" class="nav-link">Perú</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Inicio</a>
+        <a href="argentina.html" class="mobile-nav-link">Argentina</a>
+        <a href="chile.html" class="mobile-nav-link">Chile</a>
+        <a href="peru.html" class="mobile-nav-link">Perú</a>
+    </nav>
+
+    <section class="page-header">
+        <a href="argentina.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver a Argentina</a>
+        <h2>Buenos Aires - Argentina</h2>
+        <p>La capital: tango, cultura, gastronomía y la grandiosidad de una metrópolis vibrante</p>
+    </section>
+
+    <main class="container">
+        <section class="gallery-section">
+            <div class="photo-grid" id="photoGrid"></div>
+        </section>
+    </main>
+
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="modal-content">
+            <button class="modal-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <img id="modalImage" src="" alt="Imagen ampliada" class="modal-image">
+            <button class="modal-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="modal-counter" id="modalCounter"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tu-email@example.com" class="footer-link" id="footer-email">tu-email@example.com</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/tu-usuario" class="social-link" id="footer-instagram" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://flickr.com/photos/tu-usuario" class="social-link" id="footer-flickr" target="_blank" title="Flickr">
+                            <i class="fab fa-flickr"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@MographGabrielMaradey" class="social-link" id="footer-youtube" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Ubicación</h4>
+                    <p id="footer-location">Tu Ciudad, Tu País</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Blog de Viajes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const galleryConfig = {
+            region: 'buenosaires',
+            title: 'Buenos Aires - Argentina',
+            columns: 5,
+            rows: 5
+        };
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

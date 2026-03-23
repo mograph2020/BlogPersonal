@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog de Viajes - Sudamérica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Fotos de mis <span class="viajes">viajes</span></h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="argentina.html" class="nav-link">Argentina</a>
+                <a href="chile.html" class="nav-link">Chile</a>
+                <a href="peru.html" class="nav-link">Perú</a>
+                <a href="uruguay.html" class="nav-link">Uruguay</a>
+                <a href="weather.html" class="nav-link">Clima</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Inicio</a>
+        <a href="argentina.html" class="mobile-nav-link">Argentina</a>
+        <a href="chile.html" class="mobile-nav-link">Chile</a>
+        <a href="peru.html" class="mobile-nav-link">Perú</a>
+        <a href="uruguay.html" class="mobile-nav-link">Uruguay</a>
+        <a href="weather.html" class="mobile-nav-link">Clima</a>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section class="parallax-hero" id="parallaxHero">
+        <div class="parallax-bg" style="background-image: url('images/parallax-bg.jpg')"></div>
+        <div class="parallax-content">
+            <h2 class="fade-in-title">Explora Sudamérica</h2>
+            <p class="fade-in-subtitle">Viajes, aventuras y momentos inolvidables</p>
+            <a href="#destinations" class="cta-button">Conocer Más</a>
+        </div>
+    </section>
+
+    <!-- Main Content - Three Destination Cards -->
+    <main class="container">
+        <section id="destinations" class="destinations-section">
+            <h2 class="section-title">Destinos <u>Visitados</u></h2>
+            <div class="destinations-grid">
+                
+                <!-- Argentina Card -->
+                <div class="destination-card" data-country="argentina">
+                    <div class="card-image" style="background-image: url('paralax/para.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Argentina</h3>
+                        <p>Descubre las maravillas del Nordeste, Noroeste, Buenos Aires, Mendoza, Patagonia y Ushuaia.</p>
+                        <a href="argentina.html" class="card-link">Ver Más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Chile Card -->
+                <div class="destination-card" data-country="chile">
+                    <div class="card-image" style="background-image: url('cards/chile.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Chile</h3>
+                        <p>Explora la diversidad de Chile desde el norte al sur, con sus increíbles paisajes naturales.</p>
+                        <a href="chile.html" class="card-link">Ver Más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Perú Card -->
+                <div class="destination-card" data-country="peru">
+                    <div class="card-image" style="background-image: url('images/peru-thumb.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Perú</h3>
+                        <p>Sumérgete en la rica cultura y la belleza natural que ofrece el país de los Incas.</p>
+                        <a href="peru.html" class="card-link">Ver Más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Uruguay Card -->
+                <div class="destination-card" data-country="uruguay">
+                    <div class="card-image" style="background-image: url('cards/uruguay.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Uruguay</h3>
+                        <p>Descubre la magia de Uruguay con sus playas, ciudades coloniales y vinos de excelencia.</p>
+                        <a href="uruguay.html" class="card-link">Ver Más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tu-email@example.com" class="footer-link" id="footer-email">tu-email@example.com</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/tu-usuario" class="social-link" id="footer-instagram" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://flickr.com/photos/tu-usuario" class="social-link" id="footer-flickr" target="_blank" title="Flickr">
+                            <i class="fab fa-flickr"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@MographGabrielMaradey" class="social-link" id="footer-youtube" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Ubicación</h4>
+                    <p id="footer-location">Tu Ciudad, Tu País</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Blog de Viajes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        <!--Ejemplo de código proporcionado por un servicio gratuito 
+<div id="sfck9j769hf3m9csr8j2yqa5w37nu91hs5g"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=k9j769hf3m9csr8j2yqa5w37nu91hs5g&down=async" async></script><br></noscript> -->
+    </footer>
+
+    
+</body>
+</html>
